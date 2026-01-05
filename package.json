@@ -1,0 +1,26 @@
+{
+  "name": "agent-game",
+  "version": "1.0.0",
+  "description": "AI Agent Simulation - Resource World",
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "serve": "npx http-server -p 8080 -o",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json}\" \"*.{json,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json}\" \"*.{json,md}\""
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "simulation",
+    "game"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "typescript": "^4.9.5"
+  }
+}

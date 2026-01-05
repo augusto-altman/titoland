@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Simulation - Resource World</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Agent Resource World</h1>
+
+        <div class="main-content">
+            <!-- Game Grid -->
+            <div class="game-section">
+                <canvas id="gameCanvas" width="600" height="600"></canvas>
+            </div>
+
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <div class="section">
+                    <h2>Agent Status</h2>
+                    <div id="agentStatus" class="status-box">
+                        <div><strong>Position:</strong> <span id="agentPos">Not started</span></div>
+                        <div><strong>Inventory:</strong> <span id="agentInventory">Empty</span></div>
+                        <div><strong>Status:</strong> <span id="agentState">Idle</span></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Set Goal</h2>
+                    <textarea
+                        id="goalInput"
+                        placeholder="e.g., Gather 10 wood and 5 stone, then build a shelter"
+                        rows="3"
+                    ></textarea>
+                    <input
+                        type="text"
+                        id="apiKeyInput"
+                        placeholder="Enter your Gemini API key"
+                        class="api-key-input"
+                    />
+                </div>
+
+                <div class="section">
+                    <button id="startBtn" class="btn btn-primary">Start Agent</button>
+                    <button id="stopBtn" class="btn btn-secondary" disabled>Stop Agent</button>
+                    <button id="resetBtn" class="btn btn-secondary">Reset World</button>
+                </div>
+
+                <div class="section">
+                    <h2>Activity Log</h2>
+                    <div id="activityLog" class="log-box"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+            <h3>Legend</h3>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #3498db;"></div>
+                    <span>Water</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #27ae60;"></div>
+                    <span>Grass</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #8b4513;"></div>
+                    <span>Forest (Wood)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #7f8c8d;"></div>
+                    <span>Mountain (Stone)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #f39c12;"></div>
+                    <span>Desert (Sand)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: red;"></div>
+                    <span>Agent</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="dist/main.js"></script>
+</body>
+</html>
